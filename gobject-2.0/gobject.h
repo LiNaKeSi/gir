@@ -52,7 +52,6 @@ GType _g_type_param_uint();
 GType _g_type_param_uint64();
 GType _g_type_param_ulong();
 GType _g_type_param_unichar();
-GType _g_type_param_value_array();
 GType _g_type_param_variant();
 
 GParamSpec *_g_object_find_property(GObject *object, const char *name);

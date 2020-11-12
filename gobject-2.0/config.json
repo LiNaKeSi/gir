@@ -18,7 +18,8 @@
 	},
 	"blacklist": {
 		"structs": [
-			"ParamSpecPool"
+			"ParamSpecPool",
+			"ValueArray"
 		]
 	},
 	"method-blacklist": {

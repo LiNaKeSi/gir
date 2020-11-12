@@ -733,36 +733,6 @@ func (this *ParamSpecUnichar) GetStaticType() Type {
 }
 
 //--------------------------------------------------------------
-// ParamSpecValueArray
-//--------------------------------------------------------------
-
-type ParamSpecValueArrayLike interface {
-	InheritedFromGParamSpecValueArray() *C.GParamSpecValueArray
-}
-
-type ParamSpecValueArray struct {
-	ParamSpec
-}
-
-func ToParamSpecValueArray(pspeclike ParamSpecValueArrayLike) *ParamSpecValueArray {
-	t := (*ParamSpecValueArray)(nil).GetStaticType()
-	c := pspeclike.InheritedFromGParamSpecValueArray()
-	obj := ParamSpecGrabIfType(unsafe.Pointer(c), t)
-	if obj != nil {
-		return (*ParamSpecValueArray)(obj)
-	}
-	panic("cannot cast to ParamSpecValueArray")
-}
-
-func (this *ParamSpecValueArray) InheritedFromGParamSpecValueArray() *C.GParamSpecValueArray {
-	return (*C.GParamSpecValueArray)(this.C)
-}
-
-func (this *ParamSpecValueArray) GetStaticType() Type {
-	return Type(C._g_type_param_value_array())
-}
-
-//--------------------------------------------------------------
 // ParamSpecVariant
 //--------------------------------------------------------------
 

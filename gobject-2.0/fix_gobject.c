@@ -67,7 +67,6 @@ GType _g_type_param_uint()		{ return G_TYPE_PARAM_UINT; }
 GType _g_type_param_uint64()		{ return G_TYPE_PARAM_UINT64; }
 GType _g_type_param_ulong()		{ return G_TYPE_PARAM_ULONG; }
 GType _g_type_param_unichar()		{ return G_TYPE_PARAM_UNICHAR; }
-GType _g_type_param_value_array()	{ return G_TYPE_PARAM_VALUE_ARRAY; }
 GType _g_type_param_variant()		{ return G_TYPE_PARAM_VARIANT; }
 
 GParamSpec *_g_object_find_property(GObject *object, const char *name)
